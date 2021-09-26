@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.flex{
+	display: flex;
+}
+.flex-col{
+	display: flex;
+	flex-direction: column;
+}
+.center{
+	justify-content: center;
+	align-self: center;
+}
+.v-center{
+	align-items: center;
+}
+.h-center{
+	justify-content: center;
+}
+.space{
+	justify-content: space-between;
+}
+.space-around{
+	justify-content: space-around;
+}
+.wrap{
+	flex-wrap: wrap;
+}
+.wrap-reverse{
+	flex-wrap: wrap-reverse;
+}
+:root{
+	--primary-bg:hsl(356, 100%, 66%);
+	--primary-light-bg: hsl(355, 100%, 74%);
+	--primary-dark-bg: hsl(208, 49%, 24%)
+}
+img{
+	max-width: 100%;
+	height: 100%;
+}
+html,body{
+	font-family: sans-serif;
+	color: white;
+}
+main{
+	width: 100vw;
+	height: 550px;
+	background-image:linear-gradient(120deg,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+	padding-block-start: 20px;
+	border-bottom-left-radius: 100px;
+	isolation: isolate;
+	position: relative;
+	overflow: hidden;
+}
+.topbar svg g{
+	fill: white;
+}
+.topbar{
+	margin-inline: 30px;
+	font-family: 'Overpass', sans-serif;
+}
+.topbar h1{
+	color: white;
+
+}
+.abs-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+header .content{
+	text-align: center;
+	max-width: 50%;
+	margin-inline: auto;
+}
+header{
+	width: 100%;
+	font-family: 'Ubuntu', sans-serif;
+}
+header .content p{
+	font-size: 1.25em;
+}
+
+header .inline_section{
+	margin-block-start: 40px;
+	margin-inline: auto;
+}
+
+header .inline_section button{
+	padding: 10px;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	border: 1px solid var(--bg-color);
+		border-radius: 100px;
+	font-size: 1.15em;
+	padding-inline: 15px;
+	font-weight: 600;
+	margin-block-start: 10px;
+}
+header .inline_section .free{
+	--bg-color: white;
+	--text-color: hsl(355, 100%, 74%);
+	margin-inline-end: 20px;
+}
+header .inline_section .learn{
+	--bg-color: transparent;
+	--text-color: white;
+	border: 1px solid white;
+}
+.blobs{
+	z-index: -1;
+}
+.blobs img{
+	transform: translate(-10%,10%) scale(5);
+}
+
+section{
+	position: relative;
+	margin-block: 70px;
+	text-align: center;
+	color: var(--primary-dark-bg);
+	margin-inline: 20px;
+}
+section p{
+	font-family: Ubuntu,sans-serif;
+	color: var(--primary-dark-bg);
+	margin-inline: auto;
+	line-height: 25px;
+    word-spacing: 7px;
+    margin-block: 20px;
+    max-width: 400px;
+}
+section h1{
+	max-width: 70%;
+	margin-inline: auto;
+}
+section > .inline_section > .inline_section{
+	margin-block: 40px;
+}
+.art > .inline_section .imgbar{
+	position: relative;
+}
+.art > .inline_section .imgbar img{
+	--diameter: 400px;
+    min-width: var(--diameter);
+    height: var(--diameter);
+}
+
+.art{
+	margin-block-start: 200px;
+	background-color: hsl(237, 17%, 21%);
+	margin-inline: 0;
+	color: white;
+	border-radius: 0 100px 0 100px;
+}
+.art h1{
+	font-size: 2em;
+	font-family: 'Ubuntu',sans-serif;
+}
+.art p{
+	color: white;
+	margin-inline: 10px;
+	margin-inline: auto;
+}
+.art .circle{
+	transform: translateY(-20%);
+}
+.art .phone{
+	object-fit: contain;
+    width: 500px;
+    top: 40px;	
+}
+.art .imgbar{
+	overflow-y: hidden;
+}
+.art .content{
+	transform: translate(0,-25%);
+}
+
+footer{
+	    text-align: start;
+	background-color: hsl(240, 10%, 16%);
+	white-space: pre-wrap;
+	text-align: center;
+	justify-content: space-evenly;
+	padding-block: 50px;
+}
+footer ul{
+	list-style: none;
+}
+footer .part{
+
+}
+
+@media screen and (max-width: 325px) {
+	header .content .inline_section button{
+		font-size: 0.9em;
+	}
+}
+@media screen and (min-width: 950px) {
+	.art .inline_section{
+		flex-direction: row;
+		justify-content: center;
+	}
+	.art .phone{
+    left: 50%;
+    transform: translate(-100%,-10%);
+	}
+	.art .content{
+		margin-block: auto;
+		transform: translate(0, 0);
+	}
+	.art p{
+		text-align: start;
+	}
+}
+
+@media screen and (max-width: 632px) {
+	footer{
+		flex-direction: column;
+	}
+}
+
+@media screen and (min-width: 849px) {
+	section > .inline_section > .inline_section{
+		text-align: start;
+	}
+}
